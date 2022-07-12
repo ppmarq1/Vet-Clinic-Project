@@ -11,3 +11,16 @@ insert into animals ( id, name, date_of_birth, escape_attempts, neutered, weight
 insert into animals ( id, name, date_of_birth, escape_attempts, neutered, weight_kg) values ( 10, 'Blossom', '1998-10-13', 3, true, 17);
 insert into animals ( id, name, date_of_birth, escape_attempts, neutered, weight_kg) values ( 11, 'Ditto', '2022-05-14', 4, true, 22);
 
+
+begin;
+update animals set species = 'unspecified';
+select * from animals;
+rollback;
+
+begin;
+update animals set species = 'digimon' where name like '%mon';
+
+update animals set species = 'pokemon' where species is null;
+select * from animals;
+commit;
+
