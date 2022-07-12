@@ -24,3 +24,8 @@ update animals set species = 'pokemon' where species is null;
 select * from animals;
 commit;
 
+begin;
+delete from animals;
+select * from animals;
+rollback;
+select * from animals;
