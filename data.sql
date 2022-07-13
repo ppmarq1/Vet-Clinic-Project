@@ -30,6 +30,16 @@ select * from animals;
 rollback;
 select * from animals;
 
+--savepoint transaction
+begin;
+delete from animals where date_of_birth > '2022-01-01';
+savepoint save_point1;
+update animals set weight_kg = weight_kg * (-1);
+rollback to save_point1;
+update animals set weight_kg = weight_kg * (-1) where weight_kg < 0;
+commit;
+select * from animals;
+
 -- insert into owners table
 insert into  owners(full_name, age) values('Sam Smith ', 34), ('Jennifer Orwell', 19 ),('Bob', 45 ),('Melody Pond', 77 ),('Dean Winchester', 14 ),('Jodie Whittaker', 38 );
 -- insert into species table

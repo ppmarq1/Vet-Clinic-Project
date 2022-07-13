@@ -10,5 +10,8 @@ alter table animals drop column species;
 alter table animals add species_id INT;
 alter table animals add owner_id INT;
 
+alter table animals add constraint fk_species_table FOREIGN KEY(species_id) references species(id);
+alter table animals add constraint fk_owner_table FOREIGN KEY(owner_id) references owners(id);
+
 
 
