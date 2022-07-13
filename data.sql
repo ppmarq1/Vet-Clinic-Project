@@ -30,3 +30,23 @@ select * from animals;
 rollback;
 select * from animals;
 
+-- insert into owners table
+insert into  owners(full_name, age) values('Sam Smith ', 34), ('Jennifer Orwell', 19 ),('Bob', 45 ),('Melody Pond', 77 ),('Dean Winchester', 14 ),('Jodie Whittaker', 38 );
+-- insert into species table
+insert into  species(name) values('Pokemon'), ('Digimon');
+
+-- modify your inserted animals so it includes the species_id value
+update animals set species_id = (select id from species where name = 'Digimon') where name like '%mon';
+update animals set species_id = (select id from species where name = 'Pokemon') where name not like '%mon';
+
+-- modify your inserted animals to include owner information (owner_id)
+-- sam smith
+update animals set owner_id = (select id from owners where full_name = 'Sam Smith') where name = 'Agumon';
+-- jennifer orwell
+update animals set owner_id = (select id from owners where full_name = 'Jennifer Orwell') where name = 'Gabumon' or name = 'Pikachu';
+-- bob
+update animals set owner_id = (select id from owners where full_name = 'Bob') where name = 'Devimon' or name = 'Plantmon';
+-- melody pond
+update animals set owner_id = (select id from owners where full_name = 'Melody Pond') where name = 'Charmander' or name = 'Blossom' or name = 'Squirtle';
+-- dean winchester
+update animals set owner_id = (select id from owners where full_name = 'Dean Winchester') where name = 'Angemon' or name = 'Boarmon';
