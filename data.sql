@@ -29,3 +29,4 @@ delete from animals;
 select * from animals;
 rollback;
 select * from animals;
+
