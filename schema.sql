@@ -21,3 +21,7 @@ CREATE TABLE specializations ( id serial PRIMARY KEY, species_id INT NOT NULL, v
 
 --visits join table
 CREATE TABLE visits ( id serial PRIMARY KEY, animals_id INT NOT NULL, vets_id INT NOT NULL, date_of_visit DATE NOT NULL, CONSTRAINT fk_visit_animals FOREIGN KEY(animals_id) REFERENCES animals(id), CONSTRAINT fk_visits_vet FOREIGN KEY(vets_id) REFERENCES vets(id));
+
+--performace audit 
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
