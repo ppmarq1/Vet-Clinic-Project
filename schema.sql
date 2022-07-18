@@ -25,3 +25,9 @@ CREATE TABLE visits ( id serial PRIMARY KEY, animals_id INT NOT NULL, vets_id IN
 --performace audit 
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+ALTER TABLE owners  DROP COLUMN NOT NULL age;
+
+CREATE INDEX visits_animal_id_idx ON visits(animals_id);
+CREATE INDEX visits_vet_id_idx ON visits(vets_id);
+CREATE INDEX owners_email_idx ON owners(email);
