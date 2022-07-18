@@ -18,6 +18,14 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: https://twitter.com/ppmarq1
 - LinkedIn: https://br.linkedin.com/in/pedroalmeidamarques/
 
+
+
+👤 **Author1** Emmanuel Moombe
+
+- GitHub: [@medsonmoombe](https://github.com/medsonmoombe)
+- Twitter: [@emmanue78388405](https://twitter.com/@emmanue78388405)
+- LinkedIn: [@Emmanuel moombe](https://www.linkedin.com/in/emmanuel-moombe-821918230/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
