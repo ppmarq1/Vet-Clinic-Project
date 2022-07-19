@@ -1,6 +1,9 @@
 # Vet Clinic Project
 
 > This is a relational database to create the data structure for a vet clinic. It started with one table, and step by step, I created a complete database with data.
+![clini](https://user-images.githubusercontent.com/98400013/179792843-159d3f1d-b5de-45c2-addf-474f643b948a.png)
+
+
 
 ## Getting Started
 
